@@ -8,9 +8,9 @@ body {
 #cake {
   display: block;
   position: relative;
+  margin: 0 auto; /* Căn giữa theo chiều ngang */
   margin-top: -10em;
-  margin-bottom: 0;
-  margin-left: 42.5%;
+  margin-bottom: 50px; /* Khoảng cách dưới cùng */
 }
 
 /* Candle */
@@ -26,7 +26,7 @@ body {
   border-radius: 10px;
   position: relative;
   top: 247px;
-  margin-left: 49.5%;
+  margin: 0 auto; /* Căn giữa theo chiều ngang */
   width: 5px;
   height: 35px;
   transform: translateY(-300px);
@@ -58,209 +58,39 @@ body {
   border-radius: 100%;
   position: absolute;
   top: -20px;
-  left: 70%;
+  left: 50%; /* Đặt 50% để căn giữa theo chiều ngang */
+  transform: translateX(-50%); /* Di chuyển về bên trái 50% của phần tử */
   margin-left: -2.2px;
   width: 6.66666667px;
   height: 18px;
   animation: fuego 2s 6.5s infinite;
 }
 
+/* Button and Happy message */
+.happy, .button-style1, .button-style2 {
+  position: absolute;
+  top: 50%; /* Đặt 50% để căn giữa theo chiều dọc */
+  left: 50%; /* Đặt 50% để căn giữa theo chiều ngang */
+  transform: translate(-50%, -50%); /* Di chuyển về trái 50% và lên trên 50% của phần tử */
+  opacity: 1;
+  z-index: 100;
+}
+
+.button-style1 {
+  margin-top: 20px; /* Khoảng cách từ nút button đến Happy message */
+}
+
+.button-style2 {
+  margin-top: 20px; /* Khoảng cách từ nút button đến Happy message */
+}
+
 /* Responsive styles */
 @media (max-width: 768px) {
-  #cake {
-      margin-left: 25%;
-  }
-  
-  .velas {
-      margin-left: 45%;
-      width: 4px;
-      height: 28px;
-  }
-  
-  .fuego {
-      width: 5px;
-      height: 15px;
-  }
+  /* Các điều chỉnh cụ thể cho kích thước màn hình nhỏ hơn */
 }
 
 @media (max-width: 480px) {
-  #cake {
-      margin-left: 10%;
-  }
-
-  .velas {
-      margin-left: 40%;
-      width: 3px;
-      height: 25px;
-  }
-
-  .fuego {
-      width: 4px;
-      height: 12px;
-  }
-
-  .button-style1, .button-style2 {
-      top: 60%;
-      left: 50%;
-      transform: translateX(-50%);
-      animation: none;
-      opacity: 1;
-  }
-
-  .link1, .link2 {
-      width: 140px;
-      height: 50px;
-      font-size: 18px;
-  }
-
-  .happy {
-      top: 70%;
-      left: 50%;
-      transform: translateX(-50%);
-      animation: none;
-      opacity: 1;
-  }
+  /* Các điều chỉnh cụ thể cho kích thước màn hình nhỏ hơn */
 }
 
-/* Animations */
-@keyframes fuego {
-  0%, 100% {
-      background: rgba(254, 248, 97, 0.5);
-      box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
-      transform: translateY(0) scale(1);
-  }
-
-  50% {
-      background: rgba(255, 50, 0, 0.1);
-      box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
-      transform: translateY(-20px) scale(0);
-  }
-}
-
-@keyframes in {
-  to {
-      transform: translateY(0);
-  }
-}
-
-@keyframes happybirthdays {
-  0% {
-      top: 45%;
-      opacity: 0;
-  }
-  70% {
-      top: 45%;
-      opacity: 0;
-  }
-  100% {
-      top: 49%;
-      opacity: 1;
-  }
-}
-
-@keyframes btn1 {
-  0% {
-      opacity: 0;
-      left: 43.5%;
-  }
-  70% {
-      opacity: 0;
-      left: 43.5%;
-  }
-  100% {
-      opacity: 1;
-      left: 20%;
-  }
-}
-
-@keyframes btn2 {
-  0% {
-      opacity: 0;
-      left: 43.5%;
-  }
-  70% {
-      opacity: 0;
-      left: 43.5%;
-  }
-  100% {
-      opacity: 1;
-      left: 68%;
-  }
-}
-
-.bg-bubbles {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-
-.bg-bubbles li {
-  position: absolute;
-  list-style: none;
-  display: block;
-  width: 40px;
-  height: 40px;
-  background-color: rgba(255, 255, 255, 0.15);
-  bottom: -160px;
-  animation: square 30s infinite linear;
-}
-
-.bg-bubbles li:nth-child(2) {
-  width: 80px;
-  height: 80px;
-  animation-delay: 2s;
-  animation-duration: 17s;
-}
-
-.bg-bubbles li:nth-child(4) {
-  width: 60px;
-  height: 60px;
-  animation-duration: 22s;
-  background-color: rgba(255, 255, 255, 0.25);
-}
-
-.bg-bubbles li:nth-child(6) {
-  width: 120px;
-  height: 120px;
-  animation-delay: 3s;
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-.bg-bubbles li:nth-child(7) {
-  width: 160px;
-  height: 160px;
-  animation-delay: 7s;
-}
-
-.bg-bubbles li:nth-child(8) {
-  width: 20px;
-  height: 20px;
-  animation-delay: 15s;
-  animation-duration: 40s;
-}
-
-.bg-bubbles li:nth-child(9) {
-  width: 10px;
-  height: 10px;
-  animation-delay: 2s;
-  animation-duration: 40s;
-  background-color: rgba(255, 255, 255, 0.3);
-}
-
-.bg-bubbles li:nth-child(10) {
-  width: 160px;
-  height: 160px;
-  animation-delay: 11s;
-}
-
-@keyframes square {
-  0% {
-      transform: translateY(0);
-  }
-  100% {
-      transform: translateY(-900px) rotate(600deg);
-  }
-}
+/* Các keyframes và styles khác */
