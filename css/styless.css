@@ -101,20 +101,22 @@ body {
 
   /* Adjusted selectors for buttons */
   .button-style1, .button-style2 {
-    top: 60%;
-    left: 50%;
-    transform: translateX(-50%);
-    /* Removed animation: none; */
-    opacity: 1;
-  }
+    /* Các thuộc tính khác */
+    position: absolute; /* Đặt vị trí tuyệt đối */
+    bottom: 10px; /* Đặt khoảng cách với đáy của phần tử cha */
+    left: 50%; /* Đặt vị trí ngang ở giữa */
+    transform: translateX(-50%); /* Di chuyển nút về phía trái để căn giữa */
+    z-index: 1; /* Đặt thứ tự chồng lớp thấp hơn so với bánh */
+}
 
-  /* Adjusted selectors for links */
-  .link1, .link2 {
-    width: 140px;
-    height: 50px;
-    font-size: 18px;
-  }
-
+.link1, .link2 {
+    /* Các thuộc tính khác */
+    position: absolute; /* Đặt vị trí tuyệt đối */
+    bottom: 50px; /* Đặt khoảng cách với đáy của phần tử cha */
+    left: 50%; /* Đặt vị trí ngang ở giữa */
+    transform: translateX(-50%); /* Di chuyển nút về phía trái để căn giữa */
+    z-index: 1; /* Đặt thứ tự chồng lớp thấp hơn so với bánh */
+}
   /* Adjusted animation keyframes */
   .happy {
     top: 70%;
