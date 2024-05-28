@@ -10,17 +10,10 @@ body {
   position: relative;
   margin: 0 auto; /* Căn giữa theo chiều ngang */
   margin-top: -10em;
-  margin-bottom: 0;
+  margin-bottom: 50px; /* Khoảng cách dưới cùng */
 }
 
 /* Candle */
-.bg {
-  width: 100%;
-  height: 705px;
-  background: #ee9ca7;
-  background: linear-gradient(to bottom right, #ee9ca7 0%, #ee9ca7 100%);
-}
-
 .velas {
   background: #ffffff;
   border-radius: 10px;
@@ -29,7 +22,7 @@ body {
   margin: 0 auto; /* Căn giữa theo chiều ngang */
   width: 5px;
   height: 35px;
-  transform: translateY(-300px);
+  transform: translateY(-50%); /* Đặt 50% để căn giữa theo chiều dọc */
   backface-visibility: hidden;
   animation: in 500ms 6s ease-out forwards;
 }
@@ -69,11 +62,15 @@ body {
 /* Button and Happy message */
 .happy, .button-style1, .button-style2 {
   position: absolute;
-  top: 50%; /* Đặt 50% để căn giữa theo chiều dọc */
+  top: 70%; /* Đặt 70% để nút button và happy message cao hơn so với bánh */
   left: 50%; /* Đặt 50% để căn giữa theo chiều ngang */
   transform: translate(-50%, -50%); /* Di chuyển về trái 50% và lên trên 50% của phần tử */
   opacity: 1;
   z-index: 100;
+}
+
+.button-style1, .button-style2 {
+  margin-top: 20px; /* Khoảng cách từ nút button đến Happy message */
 }
 
 /* Responsive styles */
