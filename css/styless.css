@@ -10,7 +10,7 @@ body {
   position: relative;
   margin: 0 auto; /* Căn giữa theo chiều ngang */
   margin-top: -10em;
-  margin-bottom: 50px; /* Khoảng cách dưới cùng */
+  margin-bottom: 0;
 }
 
 /* Candle */
@@ -74,14 +74,6 @@ body {
   transform: translate(-50%, -50%); /* Di chuyển về trái 50% và lên trên 50% của phần tử */
   opacity: 1;
   z-index: 100;
-}
-
-.button-style1 {
-  margin-top: 20px; /* Khoảng cách từ nút button đến Happy message */
-}
-
-.button-style2 {
-  margin-top: 20px; /* Khoảng cách từ nút button đến Happy message */
 }
 
 /* Responsive styles */
